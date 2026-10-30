@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>押上・錦糸町・浅草さんぽ｜東京下町 観光ガイド</title>
+<meta name="description" content="東京スカイツリーから浅草・雷門、錦糸町まで。下町の王道観光スポットと、知る人ぞ知る穴場をまとめた観光ガイド。">
+<meta name="theme-color" content="#c1272d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --vermilion:#c1272d;
+  --vermilion-d:#9c1d22;
+  --indigo:#1f2a44;
+  --ink:#222;
+  --cream:#faf6ee;
+  --paper:#fff;
+  --gold:#b8924a;
+  --gray:#6b6b6b;
+  --line:#e8e0d0;
+  --radius:14px;
+  --serif:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;
+  --sans:"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:64px;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.8;font-size:15px;-webkit-tap-highlight-color:transparent}
+img{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;cursor:pointer}
+
+/* ---------- header ---------- */
+.site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:3px solid var(--vermilion);padding-top:env(safe-area-inset-top)}
+.site-header .inner{max-width:1080px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:6px;height:56px;padding:0 10px}
+.brand{white-space:nowrap;font-family:var(--serif);font-weight:900;font-size:16px;letter-spacing:.06em;text-decoration:none;color:var(--indigo);display:flex;align-items:center;gap:8px}
+.brand .mark{flex:none;width:20px;height:20px;border-radius:50%;background:var(--vermilion)}
+.nav{display:flex;gap:4px}
+.nav a{font-size:12.5px;font-weight:700;text-decoration:none;padding:7px 8px;border-radius:99px;color:var(--indigo);white-space:nowrap}
+.nav a:active,.nav a:hover{background:var(--cream)}
+.nav a.locked{color:var(--gray)}
+.nav a.unlocked{background:var(--indigo);color:var(--gold)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:78vh;min-height:78svh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--indigo)}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,20,40,.25) 0%,rgba(15,20,40,.15) 35%,rgba(15,20,40,.78) 100%)}
+.hero .inner{position:relative;z-index:1;width:100%;max-width:1080px;margin:0 auto;padding:0 20px 36px}
+.hero .eyebrow{font-size:12px;letter-spacing:.3em;opacity:.9;margin-bottom:8px}
+.hero h1{font-family:var(--serif);font-weight:900;font-size:clamp(26px,7.4vw,54px);line-height:1.35;letter-spacing:.06em;text-shadow:0 2px 14px rgba(0,0,0,.45)}
+.hero p.lead{margin-top:12px;font-size:14px;max-width:34em;text-shadow:0 1px 8px rgba(0,0,0,.5)}
+.hero .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.btn{display:inline-block;padding:12px 22px;border-radius:99px;font-weight:700;font-size:14px;text-decoration:none;border:2px solid transparent;transition:transform .15s}
+.btn:active{transform:scale(.97)}
+.btn.primary{background:var(--vermilion);color:#fff}
+.btn.ghost{border-color:rgba(255,255,255,.8);color:#fff;background:rgba(255,255,255,.1)}
+.hero .vertical{position:absolute;z-index:1;top:22px;right:16px;writing-mode:vertical-rl;font-family:var(--serif);font-size:13px;letter-spacing:.35em;background:rgba(193,39,45,.92);padding:14px 7px;border-radius:4px}
+
+/* ---------- areas ---------- */
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+.areas{margin-top:-26px;position:relative;z-index:2}
+.areas ul{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.areas li{background:var(--paper);border-radius:var(--radius);box-shadow:0 6px 18px rgba(0,0,0,.12);overflow:hidden}
+.areas a{display:block;text-decoration:none}
+.areas .thumb{height:78px;background-size:cover;background-position:center}
+.areas .body{padding:8px 8px 10px;text-align:center}
+.areas .name{font-family:var(--serif);font-weight:900;font-size:17px;color:var(--indigo);line-height:1.3}
+.areas .sub{font-size:10.5px;color:var(--gray);line-height:1.5;margin-top:2px}
+
+/* ---------- section heading ---------- */
+.sec{padding-top:52px;padding-bottom:8px}
+.sec-head{text-align:center;margin-bottom:22px}
+.sec-head .en{font-size:11px;letter-spacing:.35em;color:var(--vermilion);font-weight:700}
+.sec-head h2{font-family:var(--serif);font-weight:900;font-size:26px;color:var(--indigo);letter-spacing:.08em;margin-top:2px}
+.sec-head h2::after{content:"";display:block;width:44px;height:3px;background:var(--vermilion);margin:10px auto 0;border-radius:2px}
+.sec-head p{margin-top:12px;font-size:13.5px;color:var(--gray);max-width:36em;margin-left:auto;margin-right:auto}
+
+/* ---------- filter chips ---------- */
+.chips{display:flex;gap:8px;overflow-x:auto;padding:4px 16px 14px;margin:0 -16px;scrollbar-width:none;justify-content:flex-start}
+.chips::-webkit-scrollbar{display:none}
+@media(min-width:560px){.chips{justify-content:center}}
+.chip{flex:0 0 auto;border:1.5px solid var(--line);background:var(--paper);color:var(--indigo);font-weight:700;font-size:13px;padding:8px 18px;border-radius:99px}
+.chip[aria-pressed="true"]{background:var(--vermilion);border-color:var(--vermilion);color:#fff}
+
+/* ---------- cards ---------- */
+.grid{display:grid;grid-template-columns:1fr;gap:18px}
+@media(min-width:620px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:960px){.grid{grid-template-columns:repeat(3,1fr);gap:22px}}
+.card{background:var(--paper);border-radius:var(--radius);overflow:hidden;box-shadow:0 4px 16px rgba(60,40,10,.09);display:flex;flex-direction:column;opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.card.in{opacity:1;transform:none}
+.card[hidden]{display:none}
+.card .pic{position:relative;aspect-ratio:3/2;background:#ddd;overflow:hidden}
+.card .pic img{width:100%;height:100%;object-fit:cover}
+.card .pic.noimg{display:grid;place-items:center;font-size:54px;background:linear-gradient(135deg,#e9d8b8,#d6b887)}
+.card .no{position:absolute;left:0;top:0;background:var(--vermilion);color:#fff;font-family:var(--serif);font-weight:900;font-size:14px;padding:3px 12px 3px 10px;border-bottom-right-radius:12px}
+.card .area{position:absolute;right:10px;bottom:10px;background:rgba(255,255,255,.93);color:var(--indigo);font-size:11px;font-weight:700;padding:2px 10px;border-radius:99px}
+.card .txt{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card h3{font-family:var(--serif);font-weight:900;font-size:19px;color:var(--indigo);letter-spacing:.04em;line-height:1.4}
+.card h3 small{font-family:var(--sans);font-weight:500;font-size:11px;color:var(--gray);letter-spacing:.04em;margin-left:6px}
+.card p{font-size:13.5px;line-height:1.75}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:6px}
+.tags > span{font-size:11px;background:var(--cream);border:1px solid var(--line);color:#6a5a3c;padding:1px 9px;border-radius:99px}
+.access{font-size:12px;color:var(--gray);border-top:1px dashed var(--line);padding-top:8px;margin-top:6px}
+.access b{color:var(--vermilion);margin-right:4px}
+
+/* ---------- course ---------- */
+.course{background:var(--paper);border-radius:var(--radius);padding:22px 18px 8px;box-shadow:0 4px 16px rgba(60,40,10,.08);margin-top:34px}
+.course h3{font-family:var(--serif);font-weight:900;color:var(--indigo);font-size:19px;text-align:center;margin-bottom:16px}
+.timeline{list-style:none;position:relative;margin-left:8px}
+.timeline::before{content:"";position:absolute;left:5px;top:6px;bottom:18px;width:2px;background:repeating-linear-gradient(var(--vermilion) 0 6px,transparent 6px 10px)}
+.timeline li{position:relative;padding:0 0 18px 28px}
+.timeline li::before{content:"";position:absolute;left:0;top:7px;width:12px;height:12px;border-radius:50%;background:var(--vermilion);border:2px solid #fff;box-shadow:0 0 0 2px var(--vermilion)}
+.timeline .time{font-weight:700;color:var(--vermilion);font-size:13px;letter-spacing:.05em}
+.timeline .what{font-weight:700;color:var(--indigo)}
+.timeline .memo{font-size:12.5px;color:var(--gray)}
+
+/* ---------- hidden teaser (locked) ---------- */
+.teaser{margin-top:56px;background:var(--indigo);color:#fff;position:relative;overflow:hidden;padding:56px 0 60px;text-align:center}
+.teaser::before,.hidden-sec::before{content:"";position:absolute;inset:0;opacity:.07;pointer-events:none;
+  background:radial-gradient(circle at 50% 100%,transparent 0 28%,#fff 29% 31%,transparent 32% 44%,#fff 45% 47%,transparent 48%) 0 0/54px 30px}
+.teaser .inner{position:relative}
+.seal{width:60px;margin:0 auto 22px;color:#fff;opacity:.92}
+.seal svg{display:block;width:100%;height:auto}
+.teaser .en{font-size:11px;letter-spacing:.4em;color:var(--gold)}
+.teaser h2{font-family:var(--serif);font-weight:900;font-size:25px;letter-spacing:.1em;margin-top:2px}
+.teaser p{text-wrap:balance;font-size:13.5px;opacity:.88;margin:14px auto 0;max-width:26em;padding:0 16px}
+.teaser .fine{font-size:11px;opacity:.55;margin-top:18px;letter-spacing:.1em}
+
+/* ---------- hidden section (unlocked) ---------- */
+.hidden-sec{position:relative;margin-top:56px;background:linear-gradient(180deg,#141a2e,#1f2a44 60%,#141a2e);color:#eee6d5;padding:56px 0 64px;overflow:hidden}
+.hidden-sec[hidden]{display:none}
+.hidden-sec .wrap{position:relative}
+.hidden-sec .sec-head .en{color:var(--gold)}
+.hidden-sec .sec-head h2{color:#fff}
+.hidden-sec .sec-head h2::after{background:var(--gold)}
+.hidden-sec .sec-head p{color:#c9c0ab}
+.hidden-sec .card{background:#232d4b;box-shadow:0 6px 20px rgba(0,0,0,.35)}
+.hidden-sec .card h3{color:#fff}
+.hidden-sec .card h3 small{color:#a9a18c}
+.hidden-sec .card .no{background:var(--gold);color:#1a1f33}
+.hidden-sec .card .area{background:rgba(20,26,46,.88);color:var(--gold)}
+.hidden-sec .tags > span{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.14);color:#d9cfb8}
+.hidden-sec .access{border-color:rgba(255,255,255,.15);color:#a9a18c}
+.hidden-sec .access b{color:var(--gold)}
+.rare{color:var(--gold);letter-spacing:.15em;font-size:12px}
+.secret-note{margin-top:8px;font-size:12.5px;color:#d9cfb8;background:rgba(255,255,255,.06);border-left:3px solid var(--gold);padding:6px 10px;border-radius:0 8px 8px 0}
+
+/* ---------- secret emoji / keys ---------- */
+.sx{display:inline-block;cursor:pointer;padding:4px 2px;margin:-4px -2px;transition:transform .2s;-webkit-user-select:none;user-select:none}
+.sx.gone{animation:vanish .35s forwards;pointer-events:none}
+@keyframes vanish{40%{transform:scale(1.6) rotate(-8deg);opacity:1}100%{transform:scale(.2);opacity:0}}
+.keys{display:flex;justify-content:center;gap:12px;margin-top:16px}
+.keys i{width:12px;height:12px;border-radius:50%;border:1.5px solid var(--gold);opacity:.7;transition:.4s}
+.keys i.on{background:var(--gold);opacity:1;box-shadow:0 0 10px var(--gold)}
+
+.morse{margin:48px auto 0;max-width:520px;color:var(--gold);opacity:.7}
+.morse svg{display:block;width:100%;height:auto}
+
+.hot{position:absolute;left:30%;top:18%;width:37%;height:50%;border-radius:50%;z-index:2;
+  -webkit-touch-callout:none;-webkit-user-select:none;user-select:none;touch-action:manipulation;transition:background .6s}
+.hot.holding{background:radial-gradient(circle,rgba(255,255,255,.28),rgba(255,255,255,0) 70%)}
+
+.last{background:#000;min-height:80vh;min-height:80svh;display:grid;place-items:center;padding:60px 0}
+.last[hidden]{display:none}
+.last-inner{width:100%;max-width:520px;padding:0 20px;text-align:center;color:#eee;opacity:0;transform:translateY(16px);transition:opacity 2.4s ease,transform 2.4s ease}
+.last-inner.show{opacity:1;transform:none}
+.last-inner .en{font-size:11px;letter-spacing:.45em;color:var(--gold)}
+.last-inner .pic{margin:18px 0 0;border-radius:6px;overflow:hidden;box-shadow:0 0 50px rgba(255,255,255,.12)}
+.last-inner .pic img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.last-inner h3{font-family:var(--serif);font-weight:900;font-size:28px;color:#fff;letter-spacing:.1em;margin-top:22px}
+.last-inner .kana{font-size:12px;color:#8f8a7c;letter-spacing:.2em}
+.last-inner p.desc{font-size:14px;line-height:1.95;color:#cfc9ba;margin-top:14px;text-align:left}
+.last-inner .tags{justify-content:center;margin-top:14px}
+.last-inner .tags > span{background:transparent;border-color:rgba(255,255,255,.25);color:#cfc9ba}
+.last-inner .access{border-top:1px dashed rgba(255,255,255,.2);color:#8f8a7c;margin-top:18px}
+.last-inner .access b{color:var(--gold)}
+.last-inner .end{margin-top:48px;font-size:12px;letter-spacing:.2em;color:#6f6a5e}
+
+/* ---------- footer ---------- */
+footer{background:#14182a;color:#b9b4a6;padding:32px 0 calc(28px + env(safe-area-inset-bottom));font-size:12px;line-height:1.8}
+footer h4{color:#fff;font-size:13px;margin-bottom:6px}
+footer .note{margin-bottom:18px}
+footer details{margin:12px 0}
+footer summary{cursor:pointer;color:#fff;font-weight:700}
+footer ul{list-style:none;margin-top:8px;columns:1}
+@media(min-width:700px){footer ul{columns:2;column-gap:28px}}
+footer li{break-inside:avoid;margin-bottom:2px}
+footer a{color:#d9cfb8}
+.copy{margin-top:18px;border-top:1px solid #2a3050;padding-top:14px;text-align:center}
+
+/* ---------- toast ---------- */
+.dim{position:fixed;inset:0;background:rgba(0,0,0,.55);opacity:0;pointer-events:none;transition:opacity .35s;z-index:98}
+.dim.show{opacity:1}
+.toast{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%) scale(.85);background:var(--indigo);color:var(--gold);border:1px solid var(--gold);padding:16px 26px;border-radius:99px;font-weight:700;font-size:15px;box-shadow:0 10px 40px rgba(0,0,0,.45);opacity:0;pointer-events:none;transition:.4s;z-index:99;white-space:nowrap;max-width:92vw}
+.toast.show{opacity:1;transform:translate(-50%,-50%) scale(1)}
+
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.card{opacity:1;transform:none}}
+@media(min-width:760px){
+  body{font-size:16px}
+  .hero{min-height:70vh}
+  .areas .thumb{height:130px}
+  .areas .name{font-size:22px}
+  .areas .sub{font-size:12.5px}
+  .sec-head h2{font-size:32px}
+  .nav a{font-size:14px;padding:8px 14px}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="#top"><span class="mark" aria-hidden="true"></span>すみだ・浅草さんぽ</a>
+    <nav class="nav" aria-label="メインメニュー">
+      <a href="#classic">王道観光</a>
+      <a href="#hidden-link" id="navHidden" class="locked">🔒 ？？？</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <img class="bg" src="images/hero.jpg" alt="夕暮れの隅田川と東京スカイツリー、アサヒビール本社" fetchpriority="high">
+  <div class="vertical" aria-hidden="true">押上・錦糸町・浅草</div>
+  <div class="inner">
+    <p class="eyebrow">OSHIAGE ・ KINSHICHO ・ ASAKUSA</p>
+    <h1>空に伸びる塔と、<br>江戸の面影をめぐる旅。</h1>
+    <p class="lead">スカイツリーの足元から、雷門、そして下町の路地裏へ。新しさと懐かしさが隣り合う、東京・墨田と浅草のおさんぽガイド。</p>
+    <div class="cta">
+      <a class="btn primary" href="#classic">王道スポットを見る</a>
+      <a class="btn ghost" href="#course">1日モデルコース</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AREAS ================= -->
+<div class="wrap areas">
+  <ul>
+    <li><a href="#classic" data-jump-area="押上">
+      <div class="thumb" style="background-image:url(images/skytree.jpg)"></div>
+      <div class="body"><div class="name">押上</div><div class="sub">スカイツリー<br>ソラマチ</div></div></a></li>
+    <li><a href="#classic" data-jump-area="錦糸町">
+      <div class="thumb" style="background-image:url(images/triphony.jpg)"></div>
+      <div class="body"><div class="name">錦糸町</div><div class="sub">音楽ホール<br>駅前の繁華街</div></div></a></li>
+    <li><a href="#classic" data-jump-area="浅草">
+      <div class="thumb" style="background-image:url(images/kaminarimon.jpg)"></div>
+      <div class="body"><div class="name">浅草</div><div class="sub">雷門・浅草寺<br>仲見世通り</div></div></a></li>
+  </ul>
+</div>
+
+<!-- ================= CLASSIC ================= -->
+<section class="sec wrap" id="classic">
+  <div class="sec-head">
+    <p class="en">CLASSIC SPOTS</p>
+    <h2>王道観光編</h2>
+    <p>まずはここから。初めての下町さんぽで外せない定番スポットを、エリア別にご紹介します。</p>
+  </div>
+  <div class="chips" id="chips" role="group" aria-label="エリアで絞り込み">
+    <button class="chip" data-area="all" aria-pressed="true">すべて</button>
+    <button class="chip" data-area="押上" aria-pressed="false">押上</button>
+    <button class="chip" data-area="錦糸町" aria-pressed="false">錦糸町</button>
+    <button class="chip" data-area="浅草" aria-pressed="false">浅草</button>
+  </div>
+  <div class="grid" id="classicGrid"></div>
+
+  <div class="course" id="course">
+    <h3>🚶 1日モデルコース（浅草 → 押上 → 錦糸町）</h3>
+    <ol class="timeline">
+      <li><div class="time">09:30</div><div class="what">雷門で記念撮影</div><div class="memo">人が増える前の朝が狙い目。仲見世通りは10時前後から本格的に開店。</div></li>
+      <li><div class="time">10:00</div><div class="what">仲見世通り → 浅草寺</div><div class="memo">食べ歩きを楽しみつつ、本堂でお参り。</div></li>
+      <li><div class="time">12:00</div><div class="what">浅草で昼食</div><div class="memo">天ぷら、もんじゃ、うなぎなど下町の味を。</div></li>
+      <li><div class="time">14:00</div><div class="what">吾妻橋を渡って隅田川テラスへ</div><div class="memo">川越しのスカイツリーを眺めながら、<span class="sx" data-sx="turtle">🐢</span>のんびり徒歩で押上方面へ。</div></li>
+      <li><div class="time">15:00</div><div class="what">東京ソラマチ・スカイツリー</div><div class="memo">ショッピングや水族館。夕景を狙って展望台へ。</div></li>
+      <li><div class="time">18:30</div><div class="what">錦糸町で夕食・ひとやすみ</div><div class="memo">押上から半蔵門線で1駅。駅前の飲食店街で打ち上げを。</div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= HIDDEN: TEASER (locked) ================= -->
+<section class="teaser" id="hidden-link" aria-labelledby="teaserTitle">
+  <div class="inner">
+    <div class="seal" aria-hidden="true">
+      <svg viewBox="0 0 64 80" fill="currentColor">
+        <path d="M19 38V25a13 13 0 0 1 26 0v13" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+        <path fill-rule="evenodd" d="M14 34h36a6 6 0 0 1 6 6v28a6 6 0 0 1-6 6H14a6 6 0 0 1-6-6V40a6 6 0 0 1 6-6zM32 46a5.5 5.5 0 0 0-2.5 10.4V63a2.5 2.5 0 0 0 5 0v-6.6A5.5 5.5 0 0 0 32 46z"/>
+      </svg>
+    </div>
+    <p class="en">HIDDEN SPOTS</p>
+    <h2 id="teaserTitle">隠れた名所編</h2>
+    <p>この先は、ガイドブックにはあまり載らない、もうひとつの下町。<br>扉を開く鍵は、このページのどこかに隠されています。</p>
+    <p class="fine">— 封印されています —</p>
+    <div class="keys" aria-hidden="true"><i></i><i></i><i></i></div>
+  </div>
+</section>
+
+<!-- ================= HIDDEN: CONTENT (unlocked) ================= -->
+<section class="hidden-sec" id="hidden" hidden aria-labelledby="hiddenTitle">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="en">HIDDEN SPOTS</p>
+      <h2 id="hiddenTitle">隠れた名所編</h2>
+      <p>謎を解いたあなただけに。観光客で混み合う王道から一歩だけ外れた、静かで味わい深いスポットたちです。</p>
+    </div>
+    <div class="grid" id="hiddenGrid"></div>
+    <div class="morse" id="morse"></div>
+  </div>
+</section>
+
+<!-- ================= LAST SPOT (long-press the flower) ================= -->
+<section class="last" id="last" hidden aria-label="ラストの観光名所">
+  <div class="last-inner" id="lastInner"></div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="note">
+      <h4>ご利用にあたって</h4>
+      営業時間・料金・休業日などは変更される場合があります。お出かけ前に各施設の公式サイトなどで最新情報をご確認ください。
+    </div>
+    <details>
+      <summary>画像クレジット（Wikimedia Commons）</summary>
+      <ul id="credits"></ul>
+    </details>
+    <div class="copy">
+      © 押上・錦糸町・浅草さんぽ
+    </div>
+  </div>
+</footer>
+
+<div class="dim" id="dim"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* =====================================================================
+   スポットデータ（ここを編集するとカードが増減します）
+   img   : images/ 内のファイル名（拡張子なし） / 無い場合は emoji を表示
+   file  : Wikimedia Commons 上のファイル名（クレジット表示用）
+   lic   : ライセンス表記
+   ===================================================================== */
+const CLASSIC = [
+  { name:"雷門", kana:"かみなりもん", area:"浅草", img:"kaminarimon",
+    desc:"浅草のシンボル。高さ約4m・重さ約700kgの大提灯の前は、誰もが足を止める定番の撮影スポット。門の両脇には風神・雷神像が立つ。",
+    tags:["無料","所要10分","{{camera}} 写真映え"], access:"東京メトロ銀座線 浅草駅 徒歩すぐ",
+    file:"Kaminari Gate, Asakusa, Tokyo.jpg", lic:"CC BY-SA 4.0" },
+  { name:"仲見世通り", kana:"なかみせどおり", area:"浅草", img:"nakamise",
+    desc:"雷門から宝蔵門へ続く約250mの参道に、約90店がずらり。人形焼や揚げまんじゅうの食べ歩き、江戸小物のお土産探しが楽しい。",
+    tags:["食べ歩き","おみやげ","所要45分"], access:"雷門をくぐってすぐ",
+    file:"Nakamise-dori1.jpg", lic:"Public domain" },
+  { name:"浅草寺", kana:"せんそうじ", area:"浅草", img:"sensoji",
+    desc:"628年の創建と伝わる、東京都内最古の寺院。本堂でのお参りのほか、煙を浴びて身を清める常香炉やおみくじも人気。",
+    tags:["参拝無料","歴史","所要40分"], access:"浅草駅 徒歩約5分",
+    file:"2024-10-20 Tokyo, Sensō-ji 1.jpg", lic:"CC BY 4.0" },
+  { name:"神谷バー", kana:"かみやバー", area:"浅草", img:"kamiya",
+    desc:"明治13年（1880年）創業の老舗。レトロな店内で味わう名物カクテル「電気ブラン」は、浅草の夜の定番。",
+    tags:["老舗","レトロ","グルメ"], access:"浅草駅 徒歩約1分",
+    file:"Kamiya bar at asakusa tokyo.JPG", lic:"CC BY 3.0" },
+  { name:"浅草花やしき", kana:"あさくさはなやしき", area:"浅草", img:"hanayashiki",
+    desc:"1853年に花園として開園し、日本最古の遊園地として知られる。昭和の香りが残るアトラクションを、街なかで気軽に楽しめる。",
+    tags:["遊園地","レトロ","{{tiger}} スリル"], access:"浅草駅 徒歩約5分",
+    file:"Asakusa Hanayashiki -01.jpg", lic:"CC BY-SA 3.0" },
+  { name:"人力車で巡る浅草", kana:"じんりきしゃ", area:"浅草", img:"rickshaw",
+    desc:"車夫さんの軽快なガイドを聞きながら、風情ある路地をゆったりと。徒歩では見落としがちな名所にも連れていってくれる。",
+    tags:["体験","写真映え","カップル◎"], access:"雷門周辺に乗り場あり",
+    file:"Rickshaw in Asakusa (11919476855).jpg", lic:"CC BY 2.0" },
+  { name:"吾妻橋・隅田川テラス", kana:"あづまばし", area:"浅草", img:"sumida",
+    desc:"隅田川越しに、スカイツリーとアサヒビール本社の金色のオブジェが並ぶ、下町ならではの絶景ポイント。夕暮れ〜夜景も美しく、思わずカメラを取り出したくなる一枚が撮れる。",
+    tags:["絶景","無料","夜景"], access:"浅草駅 徒歩約3分",
+    file:"Sumida Riverside at Azuma Bridge in 2010.jpg", lic:"CC BY-SA 2.0" },
+  { name:"東京スカイツリー", kana:"とうきょうスカイツリー", area:"押上", img:"skytree",
+    desc:"高さ634mの自立式電波塔。地上350mの展望デッキと450mの展望回廊から、関東平野の大パノラマが広がる。",
+    tags:["展望台","634m","定番"], access:"とうきょうスカイツリー駅／押上駅 すぐ",
+    file:"Worm's-eye view of Tokyo Skytree with vertical symmetry impression, a sunny day, in Japan.jpg", lic:"CC BY-SA 4.0" },
+  { name:"東京ソラマチ", kana:"とうきょうソラマチ", area:"押上", img:"solamachi",
+    desc:"スカイツリーの足元に広がる約300店の商業施設。グルメ、雑貨、ここでしか買えないおみやげまで、半日いても飽きない。",
+    tags:["ショッピング","グルメ","雨の日◎"], access:"押上駅 直結",
+    file:"Tokyo Soramachi 2012.JPG", lic:"CC BY-SA 3.0" },
+  { name:"すみだ水族館", kana:"すみだすいぞくかん", area:"押上", img:"aquarium",
+    desc:"ソラマチ内にある都市型水族館。ペンギンやオットセイが泳ぐ大水槽と、幻想的なクラゲの展示が人気。",
+    tags:["水族館","屋内","デート◎"], access:"ソラマチ 5・6階",
+    file:"Sumida-Aquarium-1.jpg", lic:"CC0" },
+  { name:"すみだトリフォニーホール", kana:"すみだトリフォニーホール", area:"錦糸町", img:"triphony",
+    desc:"クラシックの殿堂として知られるコンサートホール。錦糸町駅からすぐで、公演のついでに駅前グルメも楽しめる。",
+    tags:["音楽","文化","駅近"], access:"JR錦糸町駅 北口 徒歩約2分",
+    file:"Sumida Triphony Hall 2013-02-10.JPG", lic:"CC0" },
+  { name:"錦糸町駅前の繁華街", kana:"きんしちょう", area:"錦糸町", img:"kinshicho-street",
+    desc:"大型商業施設と、にぎやかな飲食店街が駅のまわりに集まる、墨田区随一の繁華街。気取らない食事やショッピングにぴったり。",
+    tags:["グルメ","ショッピング","夜も楽しい"], access:"JR・東京メトロ 錦糸町駅 すぐ" }
+];
+
+const HIDDEN = [
+  { name:"かっぱ橋道具街", kana:"かっぱばしどうぐがい", place:"浅草", img:"kappabashi", rare:3,
+    desc:"約800mの通りに約170店が並ぶ、プロ御用達の道具の街。食品サンプルや包丁、そして屋根の上から街を見守る巨大なコックさんも。コーヒーカップ形のバルコニーは見つけたら思わず二度見。",
+    tags:["食品サンプル","包丁","ユニークな建物"], access:"田原町駅／浅草駅から徒歩約10分",
+    note:"カップを探して、上を見上げながら歩いてみて。",
+    file:"Cream and red coffee cup-shaped balconies, Niimi Tableware, Kappabashi Dougu Street, Tokyo, Japan.jpg", lic:"CC BY-SA 4.0" },
+  { name:"待乳山聖天", kana:"まつちやましょうでん", place:"浅草", img:"matsuchiyama", rare:4,
+    desc:"浅草寺のすぐ近く、小高い丘の上にたたずむ静かなお寺。大根と巾着がシンボルで、あちこちに意匠が隠れている。",
+    tags:["大根","巾着","ご利益"], access:"浅草駅から徒歩約10分",
+    note:"提灯の絵柄に注目。ここにしかない模様です。",
+    file:"Matsuchiyama Shōden - Forked Daikon.jpg", lic:"CC BY-SA 4.0" },
+  { name:"今戸神社", kana:"いまどじんじゃ", place:"浅草", img:"imado", rare:3,
+    desc:"招き猫発祥の地とも伝わる、縁結びの神社。境内には猫モチーフの授与品や絵馬が並び、静かな時間が流れている。",
+    tags:["縁結び","招き猫","ひとり旅◎"], access:"浅草駅から徒歩約15分",
+    note:"猫がたくさんいる…かもしれない。",
+    file:"Imado Shrine @ Asakusa (13824395445).jpg", lic:"CC BY 2.0" },
+  { name:"向島百花園", kana:"むこうじまひゃっかえん", place:"向島", img:"mukojima", rare:4, hot:"last",
+    desc:"江戸時代から続く、四季の草花を楽しむ庭園。春は梅、秋は萩や紅葉と、季節ごとに表情を変える。都心とは思えない静けさ。",
+    tags:["庭園","四季の花","のんびり"], access:"東向島駅から徒歩約8分",
+    note:"スカイツリーが庭の向こうに顔を出す、不思議な景色。",
+    file:"In Mukojima-Hyakkaen Garden.jpg", lic:"CC BY-SA 2.0" },
+  { name:"旧安田庭園", kana:"きゅうやすだていえん", place:"両国", img:"kyuyasuda", rare:4,
+    desc:"両国国技館のすぐそばにある、池を中心とした回遊式庭園。都会の真ん中でひと息つける、知る人ぞ知るスポット。",
+    tags:["庭園","無料","散策"], access:"JR両国駅から徒歩約5分",
+    note:"池の水位が、潮の満ち引きで変わっていた時代がある。",
+    file:"Kyu Yasuda teien 01.jpg", lic:"CC BY-SA 2.0" },
+  { name:"すみだ北斎美術館", kana:"すみだほくさいびじゅつかん", place:"両国", img:"hokusai", rare:3,
+    desc:"墨田区生まれの浮世絵師・葛飾北斎の作品を紹介する美術館。銀色に輝く外観は、建築としても必見。",
+    tags:["美術館","浮世絵","建築"], access:"両国駅から徒歩約5〜9分",
+    note:"北斎は、この区で生まれ、この区で暮らした。",
+    file:"2018 Sumida Hokusai Museum 2.jpg", lic:"CC BY-SA 4.0" },
+  { name:"亀戸天神社", kana:"かめいどてんじんしゃ", place:"亀戸", img:"kameido", rare:2,
+    desc:"池にかかる太鼓橋と社殿が美しい、学問の神様の神社。春の藤まつりが有名だが、人の少ない季節の静けさも格別。",
+    tags:["太鼓橋","藤の名所","学問の神様"], access:"亀戸駅・錦糸町駅から徒歩圏内",
+    note:"橋の上から池をのぞくと…？",
+    file:"Kameido Tenjin 20130506a.jpg", lic:"CC BY-SA 4.0" }
+];
+
+/* 向島百花園の白い花を長押しで現れる、とっておきの一か所 */
+const LAST_SPOT = { name:"牛嶋神社", kana:"うしじまじんじゃ", img:"ushijima",
+  desc:"スカイツリーのお膝元にたたずむ、平安時代創建と伝わる古社。拝殿の前には、3つの鳥居を組み合わせた珍しい「三輪鳥居」が立つ。境内の撫で牛は、体の悪いところを撫でると良くなるといわれ、そっと手を伸ばす人が絶えない。",
+  tags:["三輪鳥居","撫で牛","スカイツリーの足元"], access:"本所吾妻橋駅から徒歩約5分",
+  file:"Ushijima Shrine @ Sumida Park (13582255005).jpg", lic:"CC BY 2.0" };
+
+/* 追加クレジット（カードに出ない画像） */
+const EXTRA_CREDITS = [
+  { name:"牛嶋神社", file:"Ushijima Shrine @ Sumida Park (13582255005).jpg", lic:"CC BY 2.0" },
+  { name:"トップ画像", file:"Asahi Breweries headquarters building with the Asahi Flame and Skytree at blue hour with full moon, Sumida-ku, Tokyo, Japan.jpg", lic:"CC BY-SA 4.0" }
+];
+
+/* =====================================================================
+   隠し機能の設定
+   - 現在の謎：ページ内に仕込んだ 📷🐢🐯 を順不同で全部タップすると解除
+     （仕込み場所：雷門の📷タグ / 花やしきの🐯タグ / モデルコース14:00の🐢）
+   - 謎を変えたいときは、解けた時点で unlockHidden() を呼ぶだけでOK
+   - persist : true なら一度解くと次回以降も開いたまま
+   ===================================================================== */
+const SECRET = { persist: false, storageKey: "oshiage_hidden_unlocked" };
+
+/* リロード時はスクロール位置を復元せず、常にページ先頭から表示 */
+if("scrollRestoration" in history) history.scrollRestoration = "manual";
+if(!location.hash) window.scrollTo(0, 0);
+
+/* ---------- 共通 ---------- */
+const $ = (s, r=document) => r.querySelector(s);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const SX = { camera:"📷", turtle:"🐢", tiger:"🐯" };
+const rich = s => esc(s).replace(/\{\{(camera|turtle|tiger)\}\}/g, (_, k) => `<span class="sx" data-sx="${k}">${SX[k]}</span>`);
+const commonsUrl = f => "https://commons.wikimedia.org/wiki/File:" + encodeURIComponent(f.replace(/ /g, "_"));
+
+function cardHTML(s, i, areaLabel, rare){
+  const pic = s.img
+    ? `<img src="images/${esc(s.img)}.jpg" alt="${esc(s.name)}" loading="lazy">`
+    : "";
+  return `
+  <article class="card" data-area="${esc(areaLabel)}">
+    <div class="pic${s.img ? "" : " noimg"}">
+      ${pic || esc(s.emoji || "📍")}
+      <span class="no">${String(i+1).padStart(2,"0")}</span>
+      <span class="area">${esc(areaLabel)}</span>
+      ${s.hot ? `<span class="hot" data-hot="${esc(s.hot)}"></span>` : ""}
+    </div>
+    <div class="txt">
+      <h3>${esc(s.name)}<small>${esc(s.kana || "")}</small></h3>
+      ${rare ? `<div class="rare" aria-label="穴場度 ${rare}">穴場度 ${"★".repeat(rare)}${"☆".repeat(5-rare)}</div>` : ""}
+      <p>${rich(s.desc)}</p>
+      ${s.note ? `<div class="secret-note">💡 ${esc(s.note)}</div>` : ""}
+      <div class="tags">${s.tags.map(t => `<span>${rich(t)}</span>`).join("")}</div>
+      <div class="access"><b>ACCESS</b>${esc(s.access)}</div>
+    </div>
+  </article>`;
+}
+
+/* スクロールで順にふわっと表示 */
+const io = "IntersectionObserver" in window
+  ? new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }), { rootMargin:"0px 0px -8% 0px" })
+  : null;
+const observe = root => root.querySelectorAll(".card").forEach(c => io ? io.observe(c) : c.classList.add("in"));
+
+/* ---------- 王道編 ---------- */
+$("#classicGrid").innerHTML = CLASSIC.map((s,i) => cardHTML(s, i, s.area)).join("");
+observe($("#classicGrid"));
+
+function filterArea(area){
+  document.querySelectorAll(".chip").forEach(c => c.setAttribute("aria-pressed", String(c.dataset.area === area)));
+  document.querySelectorAll("#classicGrid .card").forEach(c => {
+    const show = area === "all" || c.dataset.area === area;
+    c.hidden = !show;
+    if(show) c.classList.add("in");
+  });
+}
+$("#chips").addEventListener("click", e => { const b = e.target.closest(".chip"); if(b) filterArea(b.dataset.area); });
+document.querySelectorAll("[data-jump-area]").forEach(a => a.addEventListener("click", () => filterArea(a.dataset.jumpArea)));
+
+/* ---------- 隠れた名所編 ---------- */
+let hiddenUnlocked = false;
+
+/* 隠れた名所編の最下部に出すモールス信号（横一列・画面幅に合わせて縮小） */
+const MORSE = "－－・－・　・－・－　・－　－・・・　・－・　・－・　・－・・　・・　・－・・・　－－・－・";
+function renderMorse(){
+  const DOT = 0.9, DASH = 5, H = 0.9, GAP = 3, WORD = 9;   // 細い破線の枠線のように見せる
+  let x = 0, out = "";
+  MORSE.split(/[\s　]+/).forEach((word, wi) => {
+    if(wi) x += WORD - GAP;
+    for(const ch of word){
+      if(/[・.•]/.test(ch)){ out += `<circle cx="${x + DOT/2}" cy="${H/2}" r="${DOT/2}"/>`; x += DOT + GAP; }
+      else { out += `<rect x="${x}" y="0" width="${DASH}" height="${H}" rx="${H/2}"/>`; x += DASH + GAP; }
+    }
+  });
+  x -= GAP;
+  $("#morse").innerHTML = `<svg viewBox="0 0 ${x} ${H}" fill="currentColor" role="img" aria-label="${esc(MORSE)}">${out}</svg>`;
+}
+
+function unlockHidden({ silent=false } = {}){
+  if(hiddenUnlocked) return;
+  hiddenUnlocked = true;
+  if(SECRET.persist) try{ localStorage.setItem(SECRET.storageKey, "1"); }catch(_){}
+
+  const teaser = $("#hidden-link"), sec = $("#hidden"), nav = $("#navHidden");
+  $("#hiddenGrid").innerHTML = HIDDEN.map((s,i) => cardHTML(s, i, s.place, s.rare)).join("");
+  renderCredits();
+  renderMorse();
+
+  const reveal = () => {
+    teaser.hidden = true;
+    sec.hidden = false;
+    observe($("#hiddenGrid"));
+    nav.textContent = "✨ 隠れた名所";
+    nav.className = "unlocked";
+    nav.setAttribute("href", "#hidden");
+    if(!silent) sec.scrollIntoView({ behavior:"smooth", block:"start" });
+  };
+  if(silent){ reveal(); return; }
+  toast("🔓 隠れた名所がアンロックされました");   // 先にポップアップ
+  setTimeout(reveal, 500);                       // 0.5秒あけてスクロール
+}
+function resetHidden(){ try{ localStorage.removeItem(SECRET.storageKey); }catch(_){} location.reload(); }
+window.unlockHidden = unlockHidden;   // 謎の正解時に呼ぶ
+window.resetHidden  = resetHidden;    // コンソールから再封印
+
+/* 謎：📷🐢🐯 を順不同で全部タップ（タップした絵文字は消える） */
+const found = new Set();
+document.addEventListener("click", e => {
+  const el = e.target.closest(".sx");
+  if(!el || hiddenUnlocked) return;
+  const k = el.dataset.sx;
+  el.classList.add("gone");
+  setTimeout(() => el.remove(), 350);
+  if(found.has(k)) return;
+  found.add(k);
+  document.querySelectorAll(".keys i").forEach((d, i) => d.classList.toggle("on", i < found.size));
+  if(found.size >= Object.keys(SX).length) unlockHidden();
+});
+
+/* ロック中にナビを押したら予告セクションへ（通常のアンカー動作でOK） */
+if(SECRET.persist){ try{ if(localStorage.getItem(SECRET.storageKey)) unlockHidden({ silent:true }); }catch(_){} }
+
+/* ---------- ラストの名所：向島百花園の白い花を長押しで、とっておきの一か所が現れる ---------- */
+const LONG_PRESS_MS = 1500;
+const lastContent = () => `
+  <p class="en">THE LAST ONE</p>
+  <div class="pic"><img src="images/${esc(LAST_SPOT.img)}.jpg" alt="${esc(LAST_SPOT.name)}"></div>
+  <h3>${esc(LAST_SPOT.name)}</h3>
+  <div class="kana">${esc(LAST_SPOT.kana)}</div>
+  <p class="desc">${esc(LAST_SPOT.desc)}</p>
+  <div class="tags">${LAST_SPOT.tags.map(t => `<span>${esc(t)}</span>`).join("")}</div>
+  <div class="access"><b>ACCESS</b>${esc(LAST_SPOT.access)}</div>
+  <p class="end">これ以上の隠し要素はありません。</p>`;
+let lastShown = false;
+function showLast(){
+  if(lastShown) return;
+  lastShown = true;
+  const sec = $("#last");
+  $("#lastInner").innerHTML = lastContent();
+  sec.hidden = false;
+  if(navigator.vibrate) navigator.vibrate(40);
+  sec.scrollIntoView({ behavior:"smooth", block:"start" });
+  requestAnimationFrame(() => requestAnimationFrame(() => $("#lastInner").classList.add("show")));
+}
+(function(){
+  let timer = null, hot = null, sx = 0, sy = 0;
+  const cancel = () => { clearTimeout(timer); if(hot) hot.classList.remove("holding"); hot = null; };
+  document.addEventListener("pointerdown", e => {
+    const h = e.target.closest(".hot");
+    if(!h || lastShown) return;
+    hot = h; sx = e.clientX; sy = e.clientY;
+    h.classList.add("holding");
+    timer = setTimeout(() => { cancel(); showLast(); }, LONG_PRESS_MS);
+  });
+  document.addEventListener("pointermove", e => { if(hot && Math.hypot(e.clientX - sx, e.clientY - sy) > 12) cancel(); });
+  ["pointerup","pointercancel"].forEach(t => document.addEventListener(t, cancel));
+  document.addEventListener("contextmenu", e => { if(e.target.closest(".hot")) e.preventDefault(); });
+})();
+
+/* ---------- toast ---------- */
+let toastTimer;
+function toast(msg){
+  const t = $("#toast");
+  t.textContent = msg;
+  t.classList.add("show");
+  $("#dim").classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => { t.classList.remove("show"); $("#dim").classList.remove("show"); }, 2500);
+}
+
+/* ---------- クレジット ---------- */
+function renderCredits(){
+  const list = [...EXTRA_CREDITS, ...CLASSIC.filter(s => s.file), ...(hiddenUnlocked ? HIDDEN : [])];
+  $("#credits").innerHTML = list.map(s =>
+    `<li>${esc(s.name)}：<a href="${commonsUrl(s.file)}" target="_blank" rel="noopener">${esc(s.lic)}</a></li>`).join("");
+}
+renderCredits();
+</script>
+</body>
+</html>
