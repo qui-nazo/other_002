@@ -125,6 +125,9 @@ button{font:inherit;cursor:pointer}
 .teaser .en{font-size:11px;letter-spacing:.4em;color:var(--gold)}
 .teaser h2{font-family:var(--serif);font-weight:900;font-size:25px;letter-spacing:.1em;margin-top:2px}
 .teaser p{text-wrap:balance;font-size:13.5px;opacity:.88;margin:14px auto 0;max-width:26em;padding:0 16px}
+.teaser p.lead{max-width:none;white-space:nowrap;text-wrap:nowrap;font-size:clamp(9.5px,3.1vw,13.5px)}
+.teaser .hint{display:block;width:100%;height:auto;margin:22px auto 0}
+@media(min-width:760px){.teaser .hint{width:min(94%,850px);border-radius:8px}}
 .teaser .fine{font-size:11px;opacity:.55;margin-top:18px;letter-spacing:.1em}
 
 /* ---------- hidden section (unlocked) ---------- */
@@ -290,7 +293,8 @@ footer a{color:#d9cfb8}
     </div>
     <p class="en">HIDDEN SPOTS</p>
     <h2 id="teaserTitle">隠れた名所編</h2>
-    <p>この先は、ガイドブックにはあまり載らない、もうひとつの下町。<br>扉を開く鍵は、このページのどこかに隠されています。</p>
+    <p class="lead">この先は、ガイドブックにはあまり載らない、もうひとつの下町。<br>扉を開く鍵は、下の謎を解けばきっと見つかります。</p>
+    <img class="hint" src="images/hint.png" alt="ヒント：07で思わず取り出したくなるもの＝（3文字）、（3文字）と（2文字）と（1文字）。探してタップしよう" loading="lazy">
     <p class="fine">— 封印されています —</p>
     <div class="keys" aria-hidden="true"><i></i><i></i><i></i></div>
   </div>
